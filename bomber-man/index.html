@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bomberman</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2210 0 100 100%22><text y=%22.90em%22 font-size=%2290%22>💣</text></svg>">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/game.js" defer type="module"></script>
+</head>
+
+<body>
+    <div id="start-screen" class="screen" style="display: block;">
+        <audio id="mainMenuAudio" loop>
+            <source src="assets/sounds/main-menu.mp3" type="audio/mp3">
+        </audio>
+        <audio id="playSound">
+            <source src="assets/sounds/Title Screen Select.wav" type="audio/mp3">
+        </audio>
+        <button id="start">
+            <img src="fonts/Bomberman.png" alt="">
+            <span class="now">now!</span>
+            <span class="play">play</span>
+        </button>
+    </div>
+    <dialog id="pause-menu">
+        <audio id="pauseSound">
+            <source src="assets/sounds/Pause.wav" type="audio/mp3">
+        </audio>
+        <div class="content">
+            <p>Game Paused</p>
+            <button id="resume">Resume</button>
+            <button id="restart">Restart</button>
+        </div>
+    </dialog>
+    <div id="game-board" style="display: none;">
+        <audio id="inGame" loop>
+            <source src="assets/sounds/inGame.mp3" type="audio/mp3">
+        </audio>
+        <audio id="explodeSound">
+            <source src="assets/sounds/Bomb Explodes.wav" type="audio/mp3">
+        </audio>
+        <audio id="playerDies">
+            <source src="assets/sounds/Bomberman Dies.wav" type="audio/mp3">
+        </audio>
+        <audio id="powerups">
+            <source src="assets/sounds/powerups.wav" type="audio/mp3">
+        </audio>
+        <audio id="victorySound">
+            <source src="assets/sounds/Stage Clear.wav" type="audio/mp3">
+        </audio>
+    </div>
+</body>
+
+</html>

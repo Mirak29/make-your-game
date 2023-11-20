@@ -1,0 +1,37 @@
+# Tâches pour le projet Bomberman
+
+## Jour 1 : Conception et structure de base
+- [x] Conception du premier niveau, y compris la disposition des murs et des obstacles.
+- [x] Création de la structure de dossiers de base.
+- [x] Création d'un fichier HTML simple.
+- [x] Mise en place d'une feuille de style CSS de base.
+
+## Jour 2 : Mise en place des éléments graphiques
+- >[ ] Création de sprites pour le personnage du joueur et les ennemis.
+- >[ ] Création de sprites pour les bombes, les murs et les obstacles.
+- >[ ] Gestion des assets audio de base.
+
+## Jour 3 : Développement du premier niveau
+- [x] Mise en place d'une grille de jeu pour le premier niveau.
+- [x] Implémentation de la mécanique de mouvement du joueur dans le premier niveau.
+- [x] Ajout de la logique pour les ennemis dans le premier niveau.
+- [x] Détection des collisions basiques dans le premier niveau.
+
+## Jour 4 : Implémentation des bombes et des power-ups
+- [x] Ajout de la logique pour poser et faire exploser les bombes dans le premier niveau.
+- [x] Implémentation des power-ups (bombes supplémentaires, vitesse, etc.) dans le premier niveau.
+
+## Jour 5 : Optimisation, test et polissage
+- [x] Implement HUD (Score + Live + Bomb type + Pause menu + Number of available bomb + Timer)
+- [ ] Optimisation de base pour maintenir une expérience fluide dans le premier niveau.
+- [ ] Tests et débogage intensifs du premier niveau.
+- [ ] Polissage de l'interface utilisateur du premier niveau.
+
+## Jour 6 : Finalisation du premier niveau et documentation
+- [ ] Finalisation du premier niveau, ajout de détails et de polissage.
+- [ ] Rédaction d'une documentation simple pour le premier niveau.
+
+## Jour 7 : Préparation pour le déploiement
+- [ ] Préparation du premier niveau pour le déploiement, y compris l'emballage des fichiers et la création d'une interface utilisateur pour démarrer le premier niveau.
+
+
