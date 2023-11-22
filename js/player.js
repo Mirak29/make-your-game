@@ -3,7 +3,6 @@ import { isValidMove } from "./board.js";
 export class Player {
   constructor() {
     this.element = document.createElement("div");
-    this.element.style.backgroundImage = "url(./fonts/player2.gif)"
     this.position = { x: 2, y: 2 };
     this.element.style.gridRowStart = this.position.y;
     this.element.style.gridColumnStart = this.position.x;
@@ -11,8 +10,8 @@ export class Player {
     this.inputDirection = { x: 0, y: 0 };
   }
 
-  update() {
-    if (this.inputDirection.x === 0 && this.inputDirection.y === 0) return;
+  update(gameOver) {
+    if ((this.inputDirection.x === 0 && this.inputDirection.y === 0) || gameOver) return;
 
     const newPositionX = this.position.x + this.inputDirection.x;
     const newPositionY = this.position.y + this.inputDirection.y;
@@ -22,6 +21,8 @@ export class Player {
       this.element.style.setProperty('--translate-y', `${this.element.clientHeight * this.inputDirection.y}px`);
 
       this.element.style.animationName = "movePlayer";
+      this.element.style.animationFillMode = "forwards";
+      this.element.style.animationDuration = "0.125s";
 
       this.element.addEventListener('animationend', () => {
         this.position.x = newPositionX;

@@ -1,6 +1,6 @@
 import { destroyWall } from "./board.js";
 import { affectEnemies } from "./enemy.js";
-import { affectPlayer } from "./game.js";
+import { affectPlayer, affectBombs } from "./game.js";
 
 export default class Bomb {
   constructor(x, y, explosionRadius) {
@@ -33,6 +33,8 @@ export default class Bomb {
     let keepRightDirection = true;
 
     affectPlayer(this.x, this.y);
+    affectEnemies(this.x, this.y);
+    affectBombs(this.x, this.y);
     for (let i = 1; i <= this.explosionRadius; i++) {
       if (keepUpDirection) {
         keepUpDirection = this.explodeInDirection(this.x, this.y - i); // Up
@@ -68,6 +70,7 @@ export default class Bomb {
 
   explodeInDirection(x, y) {
     affectPlayer(x, y);
+    affectBombs(x, y);
     this.damageScore += affectEnemies(x, y) * 50;
     const isDestroyWall = destroyWall(x - 1, y - 1);
     if (isDestroyWall === 1) {
