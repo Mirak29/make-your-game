@@ -26,7 +26,7 @@ export function displayStoryPopup(message) {
     }
 }
 
-if (window.location.pathname === "/index.html"){
+if (window.location.pathname !== "/game.html"){
     const start = document.getElementById("start")
     start.addEventListener('click', () => showPopup());
 }
