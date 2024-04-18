@@ -19,13 +19,34 @@
             <source src="assets/sounds/Title Screen Select.wav" type="audio/mp3">
         </audio>
         <h1>BomberMan</h1>
-        <a href="./game.html" id="start">
+        <div id="start">
             <img src="fonts/Bomberman.png" alt="">
             <span class="now">now!</span>
             <span class="play">play</span>
-        </a>
+        </div>
     </div>
-    <script>
+    <div id="popup">
+        <div id="popup-content">
+            <h2>Prologue</h2>
+            <p id="para1" style="display: none;">In a distant world, where darkness threatens to engulf everything, a
+                humble smiley stands as the last bastion against chaos. Nicknamed "Bomby", this courageous little hero
+                possesses a unique talent: the ability to place bombs. However, his destiny far exceeds his modest
+                appearance. Driven by unwavering determination and guided by an innate sense of duty, Bomby ventures
+                bravely into lands infested with spectres, determined to exterminate them and restore peace to his
+                beloved world.</p>
+            <p id="para2" style="display: none;">Created by the forces of darkness themselves, spectres are malevolent
+                entities that threaten to plunge the world into eternal darkness. Their mere presence is enough to sow
+                terror among the inhabitants, forcing them to live in fear and uncertainty. But Bomby is not one to back
+                down from adversity. Armed with his courage and explosive bombs, he plunges headlong into battle,
+                determined to eradicate every spectre in his path.</p>
+            <p id="para3" style="display: none;">And so begins the epic of Bomby, a perilous journey through lands
+                ravaged by evil. Each bomb explosion is a step closer to victory, each defeated spectre a glimmer of
+                hope for a better future. With each obstacle overcome, Bomby draws nearer to his ultimate goal: to save
+                his world from the shadow that threatens it. His story will become legend, and his courage will
+                illuminate the hearts of all who hear it.</p>
+        </div>
+    </div>
+    <script src="js/history.js" defer type="module">
         const mainMenuAudio = document.getElementById('mainMenuAudio');
         document.addEventListener("DOMContentLoaded", () => {
             mainMenuAudio.volume = 0.5;

@@ -16,6 +16,66 @@ body {
     background-size: cover;
 }
 
+#popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 100%;
+    max-width: 600px; /* Ajuste la largeur maximale selon ton design */
+    padding: 20px;
+    text-align: center;
+    z-index: 5;
+}
+
+#popup h2 {
+    font-family: Blomberg;
+    font-size: 5rem;
+    letter-spacing: .125rem;
+}
+
+#popup div{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 8px 32px 0 rgba(14, 17, 58, 0.37);
+    backdrop-filter: blur( 0px );
+    -webkit-backdrop-filter: blur( 0px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bolder;
+
+}
+
+#popup p{
+    font-size: 1.5rem;
+}
+
+#history{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 10px;
+    left: 10px;
+    width: 290px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+
+}
+
 h1 {
     font-family: Blomberg;
     font-size: 10rem;

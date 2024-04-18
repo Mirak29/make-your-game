@@ -103,8 +103,6 @@ class BomberManGame {
   placeBomb() {
     this.addBomb = false;
     if (this.availableBombs > 0) {
-      // Check if the player can place a bomb
-
       const bomb = new Bomb(this.player.position.x, this.player.position.y, this.getBombRadius());
       board[this.player.position.y - 1][this.player.position.x - 1] = "B";
       this.bombs.push(bomb);
@@ -112,9 +110,8 @@ class BomberManGame {
       this.availableBombs--;
       this.hUDManager.updateBombsCount(this.availableBombs);
       if (this.currentBombType === "manual") {
-        bomb.manualBomb = true; // Set the bomb as manual
+        bomb.manualBomb = true;
       } else {
-        // Set a timer to explode the bomb after 3 seconds for non-manual bombs
         this.timerManager.addTimer(bomb.id, () => {
           this.removeBomb(bomb);
           this.hUDManager.updateScore(bomb.explode());
@@ -233,7 +230,7 @@ class BomberManGame {
       this.gameOver = true;
       if (this.gameOver) {
         victorySound.play();
-        this.gameOverMessage = `Victory\n`
+        game.gameOverMessage = `The spectres have been vanquished, and the world is once again bathed in light. Our valiant hero, Bomby, emerges triumphant, having saved his beloved world from the clutches of darkness. But the battle is not over yet. As long as there are challenges to face, Bomby will be there, ready to defend his world and ensure its peace. Congratulations!\n`;
       }
     }
   }
@@ -264,7 +261,7 @@ export function affectPlayer(x, y) {
     game.gameOver = true;
     game.hUDManager.updateLives(0);
     game.player.inputDirection = { x: 0, y: 0 };
-    game.gameOverMessage = `Killed by bomb\n`
+    game.gameOverMessage = `The world is plunged into chaos. The spectres have triumphed.\nBut our hero, though destroyed, rises from the ashes.\nEmbark on the adventure again!\n`;
     game.player.element.style.animation = "explode .25s ease-in-out forwards";
     playerDies.play()
     setTimeout(() => {
