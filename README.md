@@ -43,6 +43,6 @@ To play the game locally, you'll need a web browser.
 3. Start playing!
 
 ## AUTHORS
-+  Serigne Saliou Mbacké MBAYE (@serignmbaye)
-+  Abdou Karim SOW (@abdouksow)
++  Serigne Saliou Mbacké MBAYE (@SSMM0498)
++  Abdou Karim SOW (@mirak29)
 +  Ivan Yossanguem (@iyossang)
